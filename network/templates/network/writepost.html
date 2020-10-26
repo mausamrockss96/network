@@ -1,0 +1,20 @@
+{% extends "network/layout.html" %}
+
+{% block body %}
+
+<div class="container">
+
+<h2>Namastey {{user.username}} , What's on your mind?🤔...</h2>
+    <br>
+    <form action="{% url 'submitpost' %}" method="POST">
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1"></label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="........................................................" name="content"
+            style="border: 1px dotted #00FFFF;"></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+   
+{% endblock %}
